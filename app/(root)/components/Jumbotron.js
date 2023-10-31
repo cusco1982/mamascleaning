@@ -92,9 +92,16 @@ function Jumbotron(props) {
 
 
 
-            <Typography variant="h5" color="inherit" paragraph pt={4}>
+            <Typography variant="h5" color="black" paragraph pt={4} style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', width:"25vw", margin:'auto', padding:'20px', marginTop:"20px"}}>
+
               {post.description}
+
             </Typography>
+
+
+
+
+            
 
           </Box>
         </Grid>

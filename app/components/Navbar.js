@@ -10,7 +10,7 @@ import Image from 'next/image';
 
 
 const drawerWidth = 240;
-const pages = ['Home', 'Services', 'Gallery', 'Contact'];
+const pages = ['home', 'services', 'gallery', 'contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function ResponsiveAppBar(props) {
@@ -64,11 +64,11 @@ function ResponsiveAppBar(props) {
         <>
 
             {/* <AppBar position="fixed" style={{ zIndex:'100', backgroundColor: 'rgba(255, 255, 255, 0.5)'}}> */}
-            <AppBar position="fixed" style={{ zIndex:'100', backgroundColor: 'rgba(0,0,0,.5)'}}>
+            <AppBar position="fixed" style={{ zIndex: '100', backgroundColor: 'rgba(0,0,0,.5)' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
-                    
+
 
 
                         {/* Logo */}
@@ -147,13 +147,26 @@ function ResponsiveAppBar(props) {
                         {/* Links */}
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
-                                <Button
-                                    key={page}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'white', display: 'block' }}
-                                >
-                                    {page}
-                                </Button>
+
+
+
+                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{textDecoration:'none'}}>
+
+
+                                    <Button
+                                        key={page}
+                                        // onClick={handleCloseNavMenu}
+                                        sx={{ my: 2, color: 'white', display: 'block' }}
+                                    >
+                                        {page}
+                                    </Button>
+
+
+
+                                </a>
+
+
+
                             ))}
                         </Box>
 
@@ -230,7 +243,7 @@ ResponsiveAppBar.propTypes = {
      * You won't need it on your project.
      */
     window: PropTypes.func,
-  };
+};
 
 
 export default ResponsiveAppBar;
