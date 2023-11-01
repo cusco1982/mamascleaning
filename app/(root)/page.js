@@ -2,7 +2,7 @@
 // import styles from './page.module.css'
 
 
-import { Container, Grid, Typography } from '@mui/material'
+import { Button, Container, Grid, Typography } from '@mui/material'
 import Jumbotron from "./components/Jumbotron"
 
 import Image from 'next/image';
@@ -74,18 +74,20 @@ export default function Home() {
 
 
 
+      <div style={{ backgroundColor: '', textAlign: 'center', padding: '50px' }}>
 
 
-      <br />
-      <br />
-      <br />
-      <br />
+
+        <a href="tel:9083706943">
+          <Button variant='contained'>Call Now!</Button>
+        </a>
+
+      </div>
+
+
 
       <br />
       <br />
-      <br />
-      <br />
-
 
 
 

@@ -63,7 +63,6 @@ function ResponsiveAppBar(props) {
 
         <>
 
-            {/* <AppBar position="fixed" style={{ zIndex:'100', backgroundColor: 'rgba(255, 255, 255, 0.5)'}}> */}
             <AppBar position="fixed" style={{ zIndex: '100', backgroundColor: 'rgba(0,0,0,.5)' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
@@ -73,13 +72,19 @@ function ResponsiveAppBar(props) {
 
                         {/* Logo */}
                         <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                            <Image
-                                src='/mcs/mamacslogo1.png'
-                                alt='logo'
-                                height={110}
-                                width={300}
-                                style={{ backgroundColor: "" }}
-                            />
+
+                            <a href="/">
+
+
+                                <Image
+                                    src='/mcs/mamacslogo1.png'
+                                    alt='logo'
+                                    height={110}
+                                    width={310}
+                                    style={{ backgroundColor: "" }}
+                                />
+                            </a>
+
                         </Box>
 
 
@@ -150,7 +155,7 @@ function ResponsiveAppBar(props) {
 
 
 
-                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{textDecoration:'none'}}>
+                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{ textDecoration: 'none' }}>
 
 
                                     <Button

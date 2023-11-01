@@ -15,24 +15,30 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'San Francisco – Oakland Bay Bridge, United States',
+    label: 'Make your floors look brand new!',
     imgPath:
-      'https://images.unsplash.com/photo-1537944434965-cf4679d1a598?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://img.buzzfeed.com/buzzfeed-static/static/2022-03/17/13/campaign_images/a1e34d3ce130/28-cleaning-products-with-before-and-after-pics-t-2-2430-1647524774-12_dblbig.jpg?resize=1200:*',
   },
   {
-    label: 'Bird',
+    label: 'Remove hidden stains and smells!',
     imgPath:
-      'https://images.unsplash.com/photo-1538032746644-0212e812a9e7?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://www.precisionchemdry.com/wp-content/uploads/2021/02/carpetcleaning4.jpg',
   },
   {
-    label: 'Bali, Indonesia',
+    label: 'Elimination of grease & oil!',
     imgPath:
-      'https://images.unsplash.com/photo-1537996194471-e657df975ab4?auto=format&fit=crop&w=400&h=250',
+      'https://t3.ftcdn.net/jpg/04/62/78/50/360_F_462785048_0bLhWOy5gIhRsDHLwUwBBumTN09eH8u2.jpg',
   },
   {
-    label: 'Goč, Serbia',
+    label: 'Clean smooth rips!',
     imgPath:
-      'https://images.unsplash.com/photo-1512341689857-198e7e2f3ca8?auto=format&fit=crop&w=400&h=250&q=60',
+      'https://images.squarespace-cdn.com/content/v1/5fbd00a0a889962043926581/1608044116680-UOMJENR4LWK9QCWIB3KY/before-after-water-pipe-clean-marijuana-stains.jpg',
+  },
+
+  {
+    label: 'Let us do the cleaning!',
+    imgPath:
+      'https://static.demilked.com/wp-content/uploads/2020/10/5f91315cd51ff-company-helps-clean-persons-house-coverimage.jpg'
   },
 ];
 
@@ -54,7 +60,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 400, flexGrow: 1, margin:'auto' }} >
+    <Box sx={{ maxWidth: 600, flexGrow: 1, margin: 'auto' }} >
       <Paper
         square
         elevation={0}
@@ -66,7 +72,7 @@ function SwipeableTextMobileStepper() {
           bgcolor: 'background.default',
         }}
       >
-        <Typography>{images[activeStep].label}</Typography>
+        <Typography variant='h6' style={{ margin: "auto", color: '#1A94FF', fontWeight: '600' }}>{images[activeStep].label}</Typography>
       </Paper>
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
@@ -80,9 +86,9 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 255,
+                  height: 300,
                   display: 'block',
-                  maxWidth: 400,
+                  maxWidth: 600,
                   overflow: 'hidden',
                   width: '100%',
                 }}
