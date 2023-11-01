@@ -30,12 +30,6 @@ const images = [
       'https://t3.ftcdn.net/jpg/04/62/78/50/360_F_462785048_0bLhWOy5gIhRsDHLwUwBBumTN09eH8u2.jpg',
   },
   {
-    label: 'Clean smooth rips!',
-    imgPath:
-      'https://images.squarespace-cdn.com/content/v1/5fbd00a0a889962043926581/1608044116680-UOMJENR4LWK9QCWIB3KY/before-after-water-pipe-clean-marijuana-stains.jpg',
-  },
-
-  {
     label: 'Let us do the cleaning!',
     imgPath:
       'https://static.demilked.com/wp-content/uploads/2020/10/5f91315cd51ff-company-helps-clean-persons-house-coverimage.jpg'
