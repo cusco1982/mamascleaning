@@ -11,6 +11,9 @@ import Image from 'next/image';
 
 import jumboimg from '../../../public/mcs/jumboimg.png';
 
+import styles from './jumbotron.module.css';
+
+
 function Jumbotron(props) {
   const { post } = props;
 
@@ -30,6 +33,8 @@ function Jumbotron(props) {
         // backgroundImage: `url(${post.image})`,
       }}
     >
+
+
       {/* Increase the priority of the hero background image */}
       {<img style={{ display: 'none' }} src={post.image} alt={post.imageText} />}
       <Box
@@ -39,69 +44,58 @@ function Jumbotron(props) {
           bottom: 0,
           right: 0,
           left: 0,
-          // backgroundColor: 'rgba(0,0,0,.3)',
         }}
       />
+
+
       <Grid container pt={20}>
-        <Grid item md={12}>
+
+
+        <Grid item xs={12}>
           <Box
+          
+          className={styles.jumbo}
             sx={{
               position: 'relative',
               p: { xs: 3, md: 6 },
               pr: { md: 0 },
-              // bgcolor:'red',
-              height: '50vh'
             }}
             textAlign={'center'}
           >
-            {/* <Typography component="h1" variant="h3" color="inherit" gutterBottom>
-                {post.title}
-              </Typography> */}
+
 
 
             <Box pb={4}>
-
-
               <Image
+                className={styles.jumbologo}
                 src='/mcs/mamacslogo1.png'
-                height='240'
-                width='680'
-                // layout='fill'
-                style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', }}
-
+                fill
               />
-
             </Box>
 
 
 
-            <Button variant='container' style={{ backgroundColor: 'blue' }}>
-
-
-              <Link href="/contact" style={{ textDecoration: 'none', color: 'white', textTransform: 'none', fontSize: "1.2em", padding: '10px' }}>
-                {/* {post.linkText} */}
-                Request FREE Estimate
-              </Link>
-
-            </Button>
+            <div>
 
 
 
 
+              <Button variant='contained' className={styles.estimatebtn}>
+                <Link href="/contact" style={{ textDecoration: 'none', color: 'white', textTransform: 'none', fontSize: "1.2em", padding: '10px' }}>
+                  Request FREE Estimate
+                </Link>
+              </Button>
+
+
+              <Typography className={styles.jumbohours} variant="h5" paragraph>
+                {post.description}
+              </Typography>
 
 
 
-
-            <Typography variant="h5" color="black" paragraph pt={4} style={{ backgroundColor: 'rgba(255, 255, 255, 0.5)', width:"25vw", margin:'auto', padding:'20px', marginTop:"20px"}}>
-
-              {post.description}
-
-            </Typography>
+            </div>
 
 
-
-
-            
 
           </Box>
         </Grid>

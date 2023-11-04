@@ -1,0 +1,82 @@
+
+.jumbo{
+    height: 50vh;
+
+}
+
+
+
+
+.jumbologo {
+
+    background-color: rgba(255, 255, 255, 0.5);
+    max-width: 40vw;
+    object-fit: contain;
+    margin: auto;
+
+}
+
+
+.jumbohours {
+    color: black;
+
+
+    margin: 0;
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+
+
+
+
+
+@media (max-width:500px) {
+
+    .jumbo{
+        height: 20vh;
+    }
+
+    .jumbologo {
+        display: none;
+    }
+
+    .jumbohours {
+        /* width: 100vw !important; */
+        /* background-color: rgba(0, 0, 0, 0.5); */
+        background-color: rgba(255, 255, 255, 0.5);
+
+        /* max-width: 100% !important; */
+    }
+
+
+    .estimtebtn{
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    }
+
+}
+
+
+
+
+
+
+
+
+/* 
+@media (min-width:320px)  { smartphones, iPhone, portrait 480x320 phones }
+@media (min-width:481px)  { portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. }
+@media (min-width:641px)  { portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones }
+@media (min-width:961px)  { tablet, landscape iPad, lo-res laptops ands desktops }
+@media (min-width:1025px) { big landscape tablets, laptops, and desktops }
+@media (min-width:1281px) { hi-res laptops and desktops } 
+*/

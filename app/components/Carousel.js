@@ -11,6 +11,8 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
+import styles from './carousel.module.css';
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -54,7 +56,7 @@ function SwipeableTextMobileStepper() {
   };
 
   return (
-    <Box sx={{ maxWidth: 600, flexGrow: 1, margin: 'auto' }} >
+    <Box className={styles.carousel} sx={{ maxWidth: 600, flexGrow: 1, margin: 'auto' }} >
       <Paper
         square
         elevation={0}
@@ -62,12 +64,16 @@ function SwipeableTextMobileStepper() {
           display: 'flex',
           alignItems: 'center',
           height: 50,
-          pl: 2,
+          // pl: 2,
           bgcolor: 'background.default',
         }}
       >
         <Typography variant='h6' style={{ margin: "auto", color: '#1A94FF', fontWeight: '600' }}>{images[activeStep].label}</Typography>
       </Paper>
+
+
+
+      
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}

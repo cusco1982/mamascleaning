@@ -15,7 +15,7 @@ export default function Footer() {
 
 
     return (
-        <Box component="footer" sx={{ bgcolor: 'whitesmoke', pt: 2 }}>
+        <Box component="footer" sx={{ bgcolor: '', pt: 2 }}>
 
             <Container maxWidth="lg" style={{ textAlign: 'center' }}>
 

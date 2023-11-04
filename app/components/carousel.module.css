@@ -1,0 +1,17 @@
+/* .carousel {
+    background-color: red;
+    padding-top: 40px;
+} */
+
+
+@media (max-width:500px) {
+
+
+    .carousel {
+        padding-top: 8em;
+
+    }
+
+
+
+}

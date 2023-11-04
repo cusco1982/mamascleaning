@@ -4,6 +4,9 @@ import React from 'react'
 import { Button, Box, Container, Grid, Typography, TextField } from '@mui/material'
 import Image from 'next/image'
 
+import styles from './contact.module.css';
+
+
 export default function page() {
   return (
     <Container maxWidth="1" style={{ backgroundColor: '', margin: "auto", backgroundColor: '', marginTop: '20vh' }}>
@@ -36,35 +39,54 @@ export default function page() {
 
 
 
-      <Grid container maxWidth='1' style={{ margin: 'auto', backgroundColor: '', height: '50vh' }}>
+      <Grid container maxWidth='1' style={{ margin: 'auto', backgroundColor: '', height: '50vh', paddingBottom: '500px' }}>
 
 
 
         <Grid item md={6} style={{ backgroundColor: '', position: 'relative' }}>
           <Image
             src={'/mcs/jumboimg.png'}
-            // height={200}
-            // width={200}
-            layout='fill'
+            fill
             position='absolute'
             style={{ objectFit: 'contain' }}
           />
         </Grid>
 
 
-        <Grid item md={6} style={{ backgroundColor: '', position: 'relative' }}>
+        <Grid item xs={12} md={6} style={{ backgroundColor: '', position: 'relative' }}>
 
 
 
 
-          <div style={{ display: 'flex', padding: '20px' }}>
+          <Box className={styles.info}>
 
             <Typography>mamascleaningnj@gmail.com</Typography>
             <Typography px={4}>|</Typography>
             <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
 
-          </div>
+          </Box>
 
+
+
+
+          <Box className={styles.infosmall} py={2}>
+
+            <Typography>mamascleaningnj@gmail.com</Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
+
+          </Box>
+
+
+
+
+
+          {/* <Box style={{ display: 'flex', padding: '20px' }}>
+
+            <Typography>mamascleaningnj@gmail.com</Typography>
+            <Typography px={4}>|</Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
+
+          </Box> */}
 
 
           <Box

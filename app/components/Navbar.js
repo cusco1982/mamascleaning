@@ -22,19 +22,47 @@ function ResponsiveAppBar(props) {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
+            <Typography variant="h6" sx={{ my: 2, fontWeight:'500' }}>
                 Mama's Cleaning Service
             </Typography>
             <Divider />
             <List>
                 {pages.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
-                            <ListItemText primary={item} />
-                        </ListItemButton>
+
+                        <a key={item} href={(item === 'home') ? '/' : `/${item}`} style={{ textDecoration: 'none', margin: 'auto' }}>
+
+                            <ListItemButton sx={{ textAlign: 'center' }}>
+                                <ListItemText primary={item} />
+                            </ListItemButton>
+                        </a>
+
                     </ListItem>
                 ))}
             </List>
+
+            <Divider />
+
+
+        
+        <Box pt={5}>
+            <a href="tel:9083706943" style={{textDecoration:'none'}}>
+                <Typography variant="h7">
+                    (908) 370-6943
+                </Typography>
+            </a>
+        </Box>
+
+
+        
+        <Box pt={5}>
+                <Typography variant="h7">
+                    Linden, NJ
+                </Typography>
+        </Box>
+
+
+
         </Box>
     );
     const container = window !== undefined ? () => window().document.body : undefined;
@@ -61,9 +89,9 @@ function ResponsiveAppBar(props) {
 
     return (
 
-        <>
+        <div>
 
-            <AppBar position="fixed" style={{ zIndex: '100', backgroundColor: 'rgba(0,0,0,.5)' }}>
+            <AppBar position="fixed" style={{ zIndex: '100', top: 0, backgroundColor: 'rgba(0,0,0,.5)', width: "100%", overflow: 'hidden', maxWidth: '100vw', padding: '0 !important', margin: '0 !important' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
@@ -103,6 +131,8 @@ function ResponsiveAppBar(props) {
                             >
                                 <MenuIcon />
                             </IconButton>
+
+
                             <Menu
                                 id="menu-appbar"
                                 anchorEl={anchorElNav}
@@ -122,9 +152,18 @@ function ResponsiveAppBar(props) {
                                 }}
                             >
                                 {pages.map((page) => (
-                                    <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page}</Typography>
-                                    </MenuItem>
+
+                                    // <a key={page} onClick={handleCloseNavMenu} href={(page === 'home') ? '/' : `/${page}`}>
+                                    <a key={page} href={(page === 'home') ? '/' : `/${page}`}>
+
+
+                                        <MenuItem>
+                                            <Typography textAlign="center">{page}</Typography>
+                                        </MenuItem>
+                                    </a>
+
+
+
                                 ))}
                             </Menu>
                         </Box>
@@ -135,15 +174,20 @@ function ResponsiveAppBar(props) {
 
 
 
-                        {/* Logo */}
+                        {/* Logo small */}
                         <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, mr: 2 }}>
-                            <Image
-                                src='/mcs/mamacslogo1.png'
-                                alt='logo'
-                                height={110}
-                                width={300}
-                                style={{ backgroundColor: "" }}
-                            />
+                            <a href="/">
+
+
+                                <Image
+                                    src='/mcs/mamacslogo1.png'
+                                    alt='logo'
+                                    height={110}
+                                    width={300}
+                                    style={{ backgroundColor: "" }}
+                                />
+                            </a>
+
                         </Box>
 
 
@@ -236,7 +280,7 @@ function ResponsiveAppBar(props) {
                 </Drawer>
             </nav>
 
-        </>
+        </div>
     )
 };
 
