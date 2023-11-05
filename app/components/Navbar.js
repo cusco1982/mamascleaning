@@ -1,21 +1,21 @@
 'use client'
-import * as React from 'react';
-import PropTypes from 'prop-types';
-import { AppBar, Box, Container, Avatar, Button, Tooltip, Menu, MenuItem, Toolbar, Typography, Drawer, Divider, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
+import React, { useEffect, useState, useRef } from 'react';
+
+import { AppBar, Box, Container, Button, Menu, MenuItem, Toolbar, Typography, Drawer, Divider, List, ListItem, ListItemButton, ListItemText } from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu';
 import IconButton from '@mui/material/IconButton';
-import AdbIcon from '@mui/icons-material/Adb';
 
 import Image from 'next/image';
 
+import styles from './navbar.module.css';
 
 const drawerWidth = 240;
 const pages = ['home', 'services', 'gallery', 'contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
-function ResponsiveAppBar(props) {
 
-    const { window } = props;
+    function ResponsiveAppBar() {
+
+
     const [mobileOpen, setMobileOpen] = React.useState(false);
     const handleDrawerToggle = () => {
         setMobileOpen((prevState) => !prevState);
@@ -80,25 +80,31 @@ function ResponsiveAppBar(props) {
 
         </Box>
     );
-    const container = window !== undefined ? () => window().document.body : undefined;
+
+
+// nav scroll
+const prevScrollY = useRef(0);
+const [active, setActive] = useState(false);
+const handleScroll = () => {
+    const currentScrollY = window.scrollY;
+
+    prevScrollY.current = currentScrollY;
+
+
+    if (currentScrollY > 120) {
+        setActive(true)
+    } else {
+        setActive(false)
+    }
+    
+};
+useEffect(() => {
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+}, [active, handleScroll]);
 
 
 
-
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
-    const handleOpenNavMenu = (event) => {
-        setAnchorElNav(event.currentTarget);
-    };
-    const handleOpenUserMenu = (event) => {
-        setAnchorElUser(event.currentTarget);
-    };
-    const handleCloseNavMenu = () => {
-        setAnchorElNav(null);
-    };
-    const handleCloseUserMenu = () => {
-        setAnchorElUser(null);
-    };
 
 
 
@@ -106,7 +112,7 @@ function ResponsiveAppBar(props) {
 
         <div>
 
-            <AppBar position="fixed" style={{ zIndex: '100', top: 0, backgroundColor: 'rgba(0,0,0,.5)', width: "100%", overflow: 'hidden', maxWidth: '100vw', padding: '0 !important', margin: '0 !important', borderBottom:'2px solid #D0D3D4' }}>
+            <AppBar position="fixed" className={active ? styles.mainnavscroll : styles.mainnav}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
@@ -134,50 +140,17 @@ function ResponsiveAppBar(props) {
 
 
                         {/* Burger */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: active ? 'black' : 'white' }}>
                             <IconButton
                                 size="large"
                                 aria-label="open drawer"
                                 aria-controls="menu-appbar"
                                 aria-haspopup="true"
-                                // onClick={handleOpenNavMenu}
                                 onClick={handleDrawerToggle}
                                 color="inherit"
                             >
                                 <MenuIcon />
                             </IconButton>
-
-
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                    vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                    vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                    display: { xs: 'block', md: 'none' },
-                                }}
-                            >
-                                {pages.map((page) => (
-
-                                    <a key={page} href={(page === 'home') ? '/' : `/${page}`}>
-                                        <MenuItem>
-                                            <Typography textAlign="center">{page}</Typography>
-                                        </MenuItem>
-                                    </a>
-
-
-
-                                ))}
-                            </Menu>
                         </Box>
 
 
@@ -217,7 +190,8 @@ function ResponsiveAppBar(props) {
                                     <Button
                                         key={page}
                                         // onClick={handleCloseNavMenu}
-                                        sx={{ my: 2, color: 'white', display: 'block' }}
+                                        sx={{ my: 2, display: 'block' }}
+                                        className={ active ? styles.navlinkscroll : styles.navlinks}
                                     >
                                         {page}
                                     </Button>
@@ -281,7 +255,6 @@ function ResponsiveAppBar(props) {
 
             <nav>
                 <Drawer
-                    container={container}
                     variant="temporary"
                     open={mobileOpen}
                     onClose={handleDrawerToggle}
@@ -301,15 +274,6 @@ function ResponsiveAppBar(props) {
     )
 };
 
-
-
-ResponsiveAppBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
-    window: PropTypes.func,
-};
 
 
 export default ResponsiveAppBar;

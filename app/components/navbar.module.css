@@ -1,0 +1,32 @@
+.MuiAppBar-root{
+
+    background-color: rgba(0,0,0,.5);
+}
+
+
+.mainnav{
+    background-color: rgba(0,0,0,.5) !important;
+    transition: ease-in-out 1s;
+    z-index: 100;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0;
+}
+
+.mainnavscroll{
+    background-color: rgb(255, 255, 255);
+    transition: ease-in-out 1s;
+
+}
+
+
+.navlinks{
+    color:white;
+}
+
+.navlinkscroll{
+    color: black;
+}
