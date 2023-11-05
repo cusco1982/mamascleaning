@@ -153,10 +153,7 @@ function ResponsiveAppBar(props) {
                             >
                                 {pages.map((page) => (
 
-                                    // <a key={page} onClick={handleCloseNavMenu} href={(page === 'home') ? '/' : `/${page}`}>
                                     <a key={page} href={(page === 'home') ? '/' : `/${page}`}>
-
-
                                         <MenuItem>
                                             <Typography textAlign="center">{page}</Typography>
                                         </MenuItem>
@@ -194,12 +191,12 @@ function ResponsiveAppBar(props) {
 
 
                         {/* Links */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, bgcolor:'' }} justifyContent={'center'}>
                             {pages.map((page) => (
 
 
 
-                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{ textDecoration: 'none' }}>
+                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{ textDecoration: 'none', paddingLeft:"10px", paddingRight:'10px' }}>
 
 
                                     <Button
@@ -223,14 +220,17 @@ function ResponsiveAppBar(props) {
 
 
                         {/* Phone */}
-                        <Box sx={{ flexGrow: 0 }}>
+                        <Box sx={{ flexGrow: 0, bgcolor:'', display:{xs:'none', md:'block'} }}>
+
+                            <Button href="tel:9083706943" variant='contained'>
+
+
 
 
                             <Typography
                                 variant="h7"
                                 noWrap
-                                component="a"
-                                href="tel:9083706943"
+                                component="string"
                                 sx={{
                                     // mr: 2,
                                     display: { xs: 'none', md: 'flex' },
@@ -239,12 +239,14 @@ function ResponsiveAppBar(props) {
                                     fontWeight: 500,
                                     // letterSpacing: '1rem',
                                     color: 'inherit',
-                                    textDecoration: 'none',
                                 }}
                             >
-                                (908) 370 - 6943
+                                (908) 370-6943
                             </Typography>
 
+
+
+                            </Button>
 
 
 

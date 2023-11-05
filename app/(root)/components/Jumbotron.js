@@ -49,12 +49,10 @@ function Jumbotron(props) {
 
 
       <Grid container pt={20}>
-
-
         <Grid item xs={12}>
           <Box
-          
-          className={styles.jumbo}
+
+            className={styles.jumbo}
             sx={{
               position: 'relative',
               p: { xs: 3, md: 6 },
@@ -65,22 +63,29 @@ function Jumbotron(props) {
 
 
 
-            <Box pb={4}>
+
+
+
+
               <Image
                 className={styles.jumbologo}
                 src='/mcs/mamacslogo1.png'
                 fill
               />
-            </Box>
-
-
-
-            <div>
 
 
 
 
-              <Button variant='contained' className={styles.estimatebtn}>
+
+
+            <div className={styles.jumboinfo}>
+
+
+
+
+
+
+              <Button variant='contained'>
                 <Link href="/contact" style={{ textDecoration: 'none', color: 'white', textTransform: 'none', fontSize: "1.2em", padding: '10px' }}>
                   Request FREE Estimate
                 </Link>
@@ -93,7 +98,12 @@ function Jumbotron(props) {
 
 
 
+
+
             </div>
+
+
+
 
 
 

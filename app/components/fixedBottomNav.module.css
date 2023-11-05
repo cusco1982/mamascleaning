@@ -1,0 +1,11 @@
+.bottomnav {
+    display: none;
+}
+
+
+
+@media (max-width:500px) {
+    .bottomnav {
+        display: block;
+    }
+}

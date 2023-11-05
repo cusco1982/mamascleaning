@@ -1,5 +1,4 @@
-
-.jumbo{
+.jumbo {
     height: 50vh;
 
 }
@@ -18,18 +17,23 @@
 
 
 .jumbohours {
-    color: black;
+
+    -webkit-text-stroke: 1px black;
+    -webkit-text-fill-color: transparent;
+
+}
 
 
-    margin: 0;
+
+.jumboinfo {
 
     position: absolute;
+
     left: 0;
     right: 0;
     bottom: 0;
 
-    padding-top: 10px;
-    padding-bottom: 10px;
+
 }
 
 
@@ -40,7 +44,7 @@
 
 @media (max-width:500px) {
 
-    .jumbo{
+    .jumbo {
         height: 20vh;
     }
 
@@ -48,20 +52,7 @@
         display: none;
     }
 
-    .jumbohours {
-        /* width: 100vw !important; */
-        /* background-color: rgba(0, 0, 0, 0.5); */
-        background-color: rgba(255, 255, 255, 0.5);
 
-        /* max-width: 100% !important; */
-    }
-
-
-    .estimtebtn{
-        position: absolute;
-        top: 0;
-        bottom: 0;
-    }
 
 }
 

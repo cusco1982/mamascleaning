@@ -60,9 +60,9 @@ export default function page() {
 
           <Box className={styles.info}>
 
-            <Typography>mamascleaningnj@gmail.com</Typography>
+            <Typography><a style={{textDecoration:'none'}} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
             <Typography px={4}>|</Typography>
-            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
 
           </Box>
 
@@ -71,22 +71,13 @@ export default function page() {
 
           <Box className={styles.infosmall} py={2}>
 
-            <Typography>mamascleaningnj@gmail.com</Typography>
-            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
+          <Typography><a style={{textDecoration:'none'}} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
 
           </Box>
 
 
 
-
-
-          {/* <Box style={{ display: 'flex', padding: '20px' }}>
-
-            <Typography>mamascleaningnj@gmail.com</Typography>
-            <Typography px={4}>|</Typography>
-            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370 - 6943</a></Typography>
-
-          </Box> */}
 
 
           <Box
