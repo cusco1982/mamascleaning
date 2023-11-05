@@ -1,0 +1,35 @@
+
+.gallery{
+    margin:auto;
+    margin-top: 15vh;
+}
+
+.gallerybottom {
+    display: block;
+}
+
+.gallerytitle{
+    padding: 3em;
+}
+
+
+@media (max-width:500px) {
+
+    
+    .gallery{
+        margin-top: 10vh;
+    }
+
+    .gallerybottom {
+        display: none;
+    }
+
+
+
+
+.gallerytitle{
+    padding-top: 5em;
+    padding-bottom: 0;
+}
+
+}

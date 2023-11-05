@@ -24,7 +24,7 @@ export default function page() {
             Get in Touch with Mama's Cleaning Service - Your Trusted Cleaning Partner
           </Typography>
           <Typography variant='p' style={{ fontSize: '1.4em' }}>
-            Welcome to Mama's Cleaning Service! Reach out to us via our dedicated contact page to discuss your cleaning needs, schedule a service, or inquire about our cleaning packages. Our team of dedicated professionals is ready to assist you with any queries you may have. Let's make your space sparkling clean!
+            Let's make your space sparkling clean!
           </Typography>
         </Grid>
 
@@ -60,7 +60,7 @@ export default function page() {
 
           <Box className={styles.info}>
 
-            <Typography><a style={{textDecoration:'none'}} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
             <Typography px={4}>|</Typography>
             <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
 
@@ -71,7 +71,7 @@ export default function page() {
 
           <Box className={styles.infosmall} py={2}>
 
-          <Typography><a style={{textDecoration:'none'}} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
+            <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
             <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
 
           </Box>

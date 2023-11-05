@@ -22,7 +22,7 @@ function ResponsiveAppBar(props) {
     };
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2, fontWeight:'500' }}>
+            <Typography variant="h6" sx={{ my: 2, fontWeight: '500' }}>
                 Mama's Cleaning Service
             </Typography>
             <Divider />
@@ -30,7 +30,7 @@ function ResponsiveAppBar(props) {
                 {pages.map((item) => (
                     <ListItem key={item} disablePadding>
 
-                        <a key={item} href={(item === 'home') ? '/' : `/${item}`} style={{ textDecoration: 'none', margin: 'auto' }}>
+                        <a key={item} href={(item === 'home') ? '/' : `/${item}`} style={{ textDecoration: 'none', margin: 'auto', textTransform:'uppercase', color:'black', fontWeight:'700' }}>
 
                             <ListItemButton sx={{ textAlign: 'center' }}>
                                 <ListItemText primary={item} />
@@ -44,22 +44,37 @@ function ResponsiveAppBar(props) {
             <Divider />
 
 
-        
-        <Box pt={5}>
-            <a href="tel:9083706943" style={{textDecoration:'none'}}>
-                <Typography variant="h7">
-                    (908) 370-6943
-                </Typography>
-            </a>
-        </Box>
+
+            <Box pt={5}>
+                <a href="tel:9083706943" style={{ textDecoration: 'none' }}>
+                    <Typography variant="h7">
+                        (908) 370-6943
+                    </Typography>
+                </a>
+            </Box>
 
 
-        
-        <Box pt={5}>
+
+            <Box pt={5}>
                 <Typography variant="h7">
                     Linden, NJ
                 </Typography>
-        </Box>
+                <br />
+                <br />
+                <Typography variant="h7">
+                    Somerville, NJ
+                </Typography>
+                <br />
+                <br />
+                <Typography variant="h7">
+                    Plainfield, NJ
+                </Typography>
+                <br />
+                <br />
+                <Typography variant="h7">
+                    and nearby areas
+                </Typography>
+            </Box>
 
 
 
@@ -91,7 +106,7 @@ function ResponsiveAppBar(props) {
 
         <div>
 
-            <AppBar position="fixed" style={{ zIndex: '100', top: 0, backgroundColor: 'rgba(0,0,0,.5)', width: "100%", overflow: 'hidden', maxWidth: '100vw', padding: '0 !important', margin: '0 !important' }}>
+            <AppBar position="fixed" style={{ zIndex: '100', top: 0, backgroundColor: 'rgba(0,0,0,.5)', width: "100%", overflow: 'hidden', maxWidth: '100vw', padding: '0 !important', margin: '0 !important', borderBottom:'2px solid #D0D3D4' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
 
@@ -191,12 +206,12 @@ function ResponsiveAppBar(props) {
 
 
                         {/* Links */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, bgcolor:'' }} justifyContent={'center'}>
+                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, bgcolor: '' }} justifyContent={'center'}>
                             {pages.map((page) => (
 
 
 
-                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{ textDecoration: 'none', paddingLeft:"10px", paddingRight:'10px' }}>
+                                <a key={page} href={(page === 'home') ? '/' : `/${page}`} style={{ textDecoration: 'none', paddingLeft: "10px", paddingRight: '10px' }}>
 
 
                                     <Button
@@ -220,29 +235,29 @@ function ResponsiveAppBar(props) {
 
 
                         {/* Phone */}
-                        <Box sx={{ flexGrow: 0, bgcolor:'', display:{xs:'none', md:'block'} }}>
+                        <Box sx={{ flexGrow: 0, bgcolor: '', display: { xs: 'none', md: 'block' } }}>
 
                             <Button href="tel:9083706943" variant='contained'>
 
 
 
 
-                            <Typography
-                                variant="h7"
-                                noWrap
-                                component="string"
-                                sx={{
-                                    // mr: 2,
-                                    display: { xs: 'none', md: 'flex' },
-                                    flexGrow: 1,
-                                    fontFamily: 'monospace',
-                                    fontWeight: 500,
-                                    // letterSpacing: '1rem',
-                                    color: 'inherit',
-                                }}
-                            >
-                                (908) 370-6943
-                            </Typography>
+                                <Typography
+                                    variant="h7"
+                                    noWrap
+                                    component="string"
+                                    sx={{
+                                        // mr: 2,
+                                        display: { xs: 'none', md: 'flex' },
+                                        flexGrow: 1,
+                                        fontFamily: 'monospace',
+                                        fontWeight: 500,
+                                        // letterSpacing: '1rem',
+                                        color: 'inherit',
+                                    }}
+                                >
+                                    (908) 370-6943
+                                </Typography>
 
 
 

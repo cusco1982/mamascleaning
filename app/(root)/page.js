@@ -28,7 +28,7 @@ const mainFeaturedPost = {
 export default function Home() {
   return (
     // <main className={styles.main}>
-    <main style={{padding:'0', margin:'0', overflow:'hidden'}}>
+    <main style={{ padding: '0', margin: '0', overflow: 'hidden' }}>
 
 
 
@@ -36,14 +36,14 @@ export default function Home() {
       <Jumbotron post={mainFeaturedPost} />
 
 
-      <Grid container maxWidth="lg" style={{ backgroundColor: '', margin: "auto", height: '40vh', minHeight: "300px", padding:'20px', margin:'auto' }}>
+      <Grid container maxWidth="lg" style={{ backgroundColor: '', margin: "auto", height: '40vh', minHeight: "300px", padding: '20px', margin: 'auto' }}>
 
 
-        <Grid item md={6}  style={{ backgroundColor: '' }}>
+        <Grid item md={6} style={{ backgroundColor: '' }}>
           <Typography variant='h5' pb={4} gutterBottom style={{ fontWeight: "600", color: '#40A5FE' }}>
             Mama's Cleaning Service: Your Trusted Cleaning Partner in New Jersey
           </Typography>
-          <Typography variant='p' style={{ fontSize: '1.4em', backgroundColor:'', padding:'0' }}>
+          <Typography variant='p' style={{ fontSize: '1.2em', backgroundColor: '', padding: '0' }}>
             Are you seeking reliable and professional cleaning services in the heart of New Jersey? Look no further than Mama's Cleaning Service! With a reputation for excellence and a commitment to customer satisfaction, we deliver cleaning solutions that exceed your expectations.
           </Typography>
         </Grid>
@@ -67,14 +67,18 @@ export default function Home() {
 
 
 
+      <div style={{ paddingTop: '4em' }}>
 
 
 
-      <Carousel />
+
+        <Carousel />
+
+      </div>
 
 
 
-      <div style={{ backgroundColor: '', textAlign: 'center', paddingTop:'40px', paddingBottom:'40px'}}>
+      <div style={{ backgroundColor: '', textAlign: 'center', paddingTop: '40px', paddingBottom: '40px' }}>
 
 
 

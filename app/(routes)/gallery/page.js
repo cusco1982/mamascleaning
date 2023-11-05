@@ -4,35 +4,59 @@ import React from 'react'
 import { Button, Box, Container, Grid, Typography, TextField } from '@mui/material'
 import Image from 'next/image'
 
+import Carousel from '../../components/Carousel';
+
+import styles from './gallery.module.css';
 export default function page() {
 
 
 
   return (
-    <Container maxWidth="1" style={{ backgroundColor: '', margin: "auto", backgroundColor: '', marginTop: '15vh' }}>
+    <Container className={styles.gallery} maxWidth="1">
 
 
-      <Grid container maxWidth='lg' style={{ margin: 'auto', backgroundColor: '', padding: '40px', justifyContent:'center' }}>
+      <Grid container maxWidth='lg' style={{ margin: 'auto', justifyContent:'center' }}>
 
 
-        <Grid item md={12} style={{ backgroundColor: '', textAlign: 'center' }}>
-          <Typography p={4} variant='h4'>Gallery</Typography>
+        <Grid className={styles.gallerytitle} item md={12} style={{ backgroundColor: '', textAlign: 'center' }}>
+          <Typography variant='h4'>Gallery</Typography>
         </Grid>
 
 
 
-        <Grid item md={12} style={{ backgroundColor: '', textAlign: 'center' }}>
-          <Typography variant='h5' pb={4} gutterBottom style={{ fontWeight: "600", color: '#40A5FE' }}>
-            Get in Touch with Mama's Cleaning Service - Your Trusted Cleaning Partner
-          </Typography>
-          <Typography variant='p' style={{ fontSize: '1.4em' }}>
-            Welcome to Mama's Cleaning Service! Reach out to us via our dedicated contact page to discuss your cleaning needs, schedule a service, or inquire about our cleaning packages. Our team of dedicated professionals is ready to assist you with any queries you may have. Let's make your space sparkling clean!
-          </Typography>
-        </Grid>
+
+
+        <Carousel/>
+
+
+
+
+
+
+
+
 
 
 
       </Grid>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div className={styles.gallerybottom}>
 
 
       <Grid container maxWidth='xl' style={{ margin: 'auto', backgroundColor: '', height: '40vh', padding: '20px', paddingBottom:"200px", paddingTop:'100px' }}>
@@ -57,9 +81,6 @@ export default function page() {
           />
         </Grid>
       </Grid>
-
-
-
 
 
       <Grid container maxWidth='xl' style={{ margin: 'auto', backgroundColor: '', height: '40vh', padding: '20px', paddingBottom:"200px", paddingTop:'200px' }}>
@@ -119,6 +140,7 @@ export default function page() {
       </Grid>
 
 
+      </div>
 
 
 

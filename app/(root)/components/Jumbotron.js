@@ -55,14 +55,18 @@ function Jumbotron(props) {
             className={styles.jumbo}
             sx={{
               position: 'relative',
-              p: { xs: 3, md: 6 },
-              pr: { md: 0 },
+              // p: { xs: 3, md: 6 },
+              pb: { xs: 3, md: 6 },
+              // pr: { md: 0 },
             }}
             textAlign={'center'}
+            // justifyContent={'center'}
           >
 
 
 
+
+            <div style={{ backgroundColor: '' }}>
 
 
 
@@ -70,18 +74,18 @@ function Jumbotron(props) {
               <Image
                 className={styles.jumbologo}
                 src='/mcs/mamacslogo1.png'
-                fill
+                // fill
+                height={300}
+                width={700}
               />
 
 
 
+            </div>
 
 
 
             <div className={styles.jumboinfo}>
-
-
-
 
 
 
@@ -95,9 +99,6 @@ function Jumbotron(props) {
               <Typography className={styles.jumbohours} variant="h5" paragraph>
                 {post.description}
               </Typography>
-
-
-
 
 
             </div>
