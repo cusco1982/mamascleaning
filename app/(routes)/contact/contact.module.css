@@ -9,6 +9,32 @@
 
 
 
+
+
+.sendEmailBtn{
+    text-align: center;
+}
+
+.hiddenClass{
+    display: none;
+}
+
+
+
+.sendMailMessage{
+    padding: 10px;
+    text-align: center;
+    display: block;
+    color: green;
+}
+
+
+
+
+
+
+
+
 @media (max-width:500px) {
 
     .info {

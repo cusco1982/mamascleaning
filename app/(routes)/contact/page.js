@@ -1,19 +1,66 @@
-import React from 'react'
-
-
+'use client'
+import React, {useState} from 'react'
 import { Button, Box, Container, Grid, Typography, TextField } from '@mui/material'
 import Image from 'next/image'
-
 import styles from './contact.module.css';
 
 
+
+
+
 export default function page() {
+
+
+  const [email, setEmail] = useState(false);
+
+
+
+
+
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+
+    setEmail(true)
+
+    const formData = new FormData(event.target)
+
+    try {
+
+      const response = await fetch('/api/contact', {
+        method: 'post',
+        body: formData,
+      });
+
+      if (!response.ok) {
+        console.log("falling over")
+        throw new Error(`response status: ${response.status}`);
+      }
+
+      const responseData = await response.json();
+      console.log(responseData['message'])
+      alert('Message successfully sent');
+
+
+
+
+
+    } catch (error) {
+      console.error(error);
+      alert("Error, please try resubmitting the form");
+    }
+
+  };
+
+
+
+
+
+
+
+
   return (
     <Container maxWidth="1" style={{ backgroundColor: '', margin: "auto", backgroundColor: '', marginTop: '20vh' }}>
-
-
-
-
 
       <Grid container maxWidth='lg' style={{ margin: 'auto', backgroundColor: '', padding: '40px' }}>
 
@@ -32,31 +79,18 @@ export default function page() {
 
 
       </Grid>
-
-
-
-
-
-
-
       <Grid container maxWidth='1' style={{ margin: 'auto', backgroundColor: '', height: '50vh', paddingBottom: '500px' }}>
-
-
 
         <Grid item md={6} style={{ backgroundColor: '', position: 'relative' }}>
           <Image
             src={'/mcs/jumboimg.png'}
+            alt='jumboimg'
             fill
             position='absolute'
             style={{ objectFit: 'contain' }}
           />
         </Grid>
-
-
         <Grid item xs={12} md={6} style={{ backgroundColor: '', position: 'relative' }}>
-
-
-
 
           <Box className={styles.info}>
 
@@ -65,10 +99,6 @@ export default function page() {
             <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
 
           </Box>
-
-
-
-
           <Box className={styles.infosmall} py={2}>
 
             <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
@@ -87,20 +117,24 @@ export default function page() {
             }}
             noValidate
             autoComplete="off"
+            onSubmit={handleSubmit}
           >
 
 
             <div style={{ display: 'flex' }}>
               <TextField
                 required
-                id="outlined-required"
+                // error
+                id="fname"
+                name="fname"
                 label="First Name"
               // defaultValue="Hello World"
               />
 
               <TextField
                 required
-                id="outlined-required"
+                id="lname"
+                name="lname"
                 label="Last Name"
               />
             </div>
@@ -110,22 +144,27 @@ export default function page() {
             <div style={{ display: 'flex' }}>
               <TextField
                 required
-                id="outlined-required"
+                id="email"
+                name="email"
+                type='email'
                 label="Email"
               />
 
               <TextField
                 required
-                id="outlined-required"
+                id="phone"
                 label="Phone"
+                name="phone"
+
               />
             </div>
 
 
             <div>
               <TextField
-                id="outlined-multiline-static"
+                id="message"
                 label="Message"
+                name="message"
                 multiline
                 rows={4}
               // defaultValue="Default Value"
@@ -133,9 +172,18 @@ export default function page() {
             </div>
 
 
-            <div style={{ textAlign: 'center' }}>
-              <Button variant="contained">Send</Button>
+
+
+
+            <div className={email ? styles.hiddenClass : styles.sendEmailBtn}>
+              <Button type='submit' variant="contained">Send</Button>
             </div>
+
+
+            <div className={ email ? styles.sendMailMessage : styles.hiddenClass}>
+            <Typography>Email sent! Thank you!</Typography>
+            </div>
+
 
 
 

@@ -21,7 +21,7 @@ export default function Footer() {
 
 
 
-                <Image src={'/mcs/mamacslogo1.png'} height={65} width={180} />
+                <Image src={'/mcs/mamacslogo1.png'} alt='mamascleaningnj' height={65} width={180} />
 
 
 
