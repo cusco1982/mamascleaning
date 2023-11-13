@@ -114,7 +114,7 @@ export default function page() {
             component="form"
             sx={{
               '& .MuiTextField-root': { m: 1, width: '25ch' },
-              bgcolor:'red'
+              bgcolor:''
             }}
             noValidate
             autoComplete="off"
