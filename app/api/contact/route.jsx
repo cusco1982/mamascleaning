@@ -1,9 +1,9 @@
-const dotenv = require('dotenv');
-dotenv.config();
 import { NextResponse, NextRequest } from 'next/server'
+const dotenv = require('dotenv');
 const nodemailer = require('nodemailer');
 
 
+dotenv.config();
 
 
 
@@ -23,7 +23,7 @@ export async function POST(request) {
     const username = process.env.USERNAME;
     const password = process.env.PASSWORD;
     const host = process.env.HOST;
-    const port = process.env.PORT;
+    // const port = process.env.PORT;
 
 
 
