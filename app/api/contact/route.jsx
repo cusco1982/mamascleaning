@@ -1,15 +1,14 @@
+const dotenv = require('dotenv');
+dotenv.config();
 import { NextResponse, NextRequest } from 'next/server'
 const nodemailer = require('nodemailer');
 
-const dotenv = require('dotenv');
-dotenv.config();
 
 
 
 
 
 export async function POST(request) {
-
 
 
     // const myEmail = process.env.NEXT_PUBLIC_EMAIL;
@@ -20,12 +19,14 @@ export async function POST(request) {
 
 
 
-
     const myEmail = process.env.EMAIL;
     const username = process.env.USERNAME;
     const password = process.env.PASSWORD;
     const host = process.env.HOST;
     const port = process.env.PORT;
+
+
+
 
 
 
@@ -41,7 +42,7 @@ export async function POST(request) {
 
     const transporter = nodemailer.createTransport({
         host: host,
-        port: port,
+        port: 465,
         tls: {
             ciphers: "SSLv3",
             rejectUnauthorized: false,
