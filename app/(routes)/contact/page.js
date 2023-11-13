@@ -114,6 +114,7 @@ export default function page() {
             component="form"
             sx={{
               '& .MuiTextField-root': { m: 1, width: '25ch' },
+              bgcolor:'red'
             }}
             noValidate
             autoComplete="off"
@@ -207,9 +208,9 @@ export default function page() {
 
       <div style={{ display: '', justifyContent: '', textAlign: 'center', backgroundColor: '', padding: '30px' }}>
 
-        <Typography mr={4} variant='h4'>Hours of Operation</Typography>
-        <Typography mx={4} variant='body1'>Monday - Suday</Typography>
-        <Typography variant='body1'>9 AM - 5 PM</Typography>
+        <Typography variant='h4'>Hours of Operation</Typography>
+        <Typography variant='body1'>Monday-Sunday</Typography>
+        <Typography variant='body1'>24/7</Typography>
 
       </div>
 
