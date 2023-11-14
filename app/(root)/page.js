@@ -67,7 +67,7 @@ export default function Home() {
 
 
 
-      <div style={{ paddingTop: '2em' }}>
+      <div style={{ paddingTop: '4em' }}>
 
 
 

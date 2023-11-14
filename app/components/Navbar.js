@@ -151,7 +151,8 @@ useEffect(() => {
 
 
                         {/* Burger */}
-                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: active ? 'black' : 'white' }}>
+                        {/* <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: active ? 'black' : 'white' }}> */}
+                        <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' }, color: 'black' }}>
                             <IconButton
                                 size="large"
                                 aria-label="open drawer"

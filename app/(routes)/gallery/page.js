@@ -15,12 +15,7 @@ export default function page() {
     <Container className={styles.gallery} maxWidth="1">
 
 
-      <Grid container maxWidth='lg' style={{ margin: 'auto', justifyContent: 'center' }}>
-
-
-        <Grid className={styles.gallerytitle} item md={12} style={{ backgroundColor: '', textAlign: 'center' }}>
-          <Typography variant='h4'>Gallery</Typography>
-        </Grid>
+      <Grid container maxWidth='lg' style={{ margin: 'auto', justifyContent: 'center', paddingTop:'4em' }}>
 
 
 

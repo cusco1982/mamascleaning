@@ -15,20 +15,19 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
-    label: 'Let us do the cleaning!',
+    label: 'Dirty fridge?',
     imgPath:
       '/photos/dirtyFridge.jpg',
   },
   {
-    label: 'Make your floors look brand new!',
+    label: 'Let us clean it up!',
     imgPath:
       '/photos/cleanFridge.jpg',
   },
   {
-    label: 'Let us do the cleaning!',
+    label: 'Vents need cleaning?',
     imgPath:
       '/photos/dirtyVent.jpg',
-
   },
   {
     label: 'Let us do the cleaning!',
@@ -36,13 +35,12 @@ const images = [
       '/photos/cleanVent.jpg',
   },
   {
-    label: 'Let us do the cleaning!',
+    label: 'Messy kitchen?',
     imgPath:
       '/photos/dirtyKitchen.jpg',
-
   },
   {
-    label: 'Remove hidden stains and smells!',
+    label: 'No mess is too big for Mama!',
     imgPath:
       '/photos/cleanKitchen.jpg',
   },
@@ -53,7 +51,7 @@ const images = [
 
   },
   {
-    label: 'Elimination of grease & oil!',
+    label: 'We can clean it all!',
     imgPath:
       '/photos/cleanStove.jpg',
   }
@@ -108,6 +106,8 @@ function SwipeableTextMobileStepper() {
         index={activeStep}
         onChangeIndex={handleStepChange}
         enableMouseEvents
+
+        
       >
         {images.map((step, index) => (
           <div key={step.label}>
