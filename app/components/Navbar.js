@@ -9,6 +9,9 @@ import Image from 'next/image';
 
 import styles from './navbar.module.css';
 
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+
 const drawerWidth = 240;
 const pages = ['home', 'services', 'gallery', 'contact'];
 
@@ -74,6 +77,14 @@ const pages = ['home', 'services', 'gallery', 'contact'];
                 <Typography variant="h7">
                     and nearby areas
                 </Typography>
+            </Box>
+
+            <Divider style={{marginTop:'30px', marginBottom:'30px'}} />
+
+            <Box>
+
+                    <a href='https://www.instagram.com/mamascleaningnj/' style={{ color: 'black', margin: '5px' }} target='_blank'><InstagramIcon style={{ fontSize: '30px' }} /></a>
+                    <a href='https://www.facebook.com/MamasCleaningServiceNJ' style={{ color: 'black', margin: '5px' }} target='_blank'><FacebookIcon style={{ fontSize: '30px' }} /></a>
             </Box>
 
 

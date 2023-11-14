@@ -67,7 +67,7 @@ export default function Home() {
 
 
 
-      <div style={{ paddingTop: '4em' }}>
+      <div style={{ paddingTop: '2em' }}>
 
 
 
@@ -78,7 +78,7 @@ export default function Home() {
 
 
 
-      <div style={{ backgroundColor: '', textAlign: 'center', paddingTop: '40px', paddingBottom: '40px' }}>
+      <div style={{ backgroundColor: '', textAlign: 'center', paddingTop: '40px', paddingBottom: '20px' }}>
 
 
 

@@ -15,26 +15,57 @@ const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
   {
+    label: 'Let us do the cleaning!',
+    imgPath:
+      '/photos/dirtyFridge.jpg',
+  },
+  {
     label: 'Make your floors look brand new!',
     imgPath:
-      'https://img.buzzfeed.com/buzzfeed-static/static/2022-03/17/13/campaign_images/a1e34d3ce130/28-cleaning-products-with-before-and-after-pics-t-2-2430-1647524774-12_dblbig.jpg?resize=1200:*',
-  },
-  {
-    label: 'Remove hidden stains and smells!',
-    imgPath:
-      'https://www.precisionchemdry.com/wp-content/uploads/2021/02/carpetcleaning4.jpg',
-  },
-  {
-    label: 'Elimination of grease & oil!',
-    imgPath:
-      'https://t3.ftcdn.net/jpg/04/62/78/50/360_F_462785048_0bLhWOy5gIhRsDHLwUwBBumTN09eH8u2.jpg',
+      '/photos/cleanFridge.jpg',
   },
   {
     label: 'Let us do the cleaning!',
     imgPath:
-      'https://static.demilked.com/wp-content/uploads/2020/10/5f91315cd51ff-company-helps-clean-persons-house-coverimage.jpg'
+      '/photos/dirtyVent.jpg',
+
   },
+  {
+    label: 'Let us do the cleaning!',
+    imgPath:
+      '/photos/cleanVent.jpg',
+  },
+  {
+    label: 'Let us do the cleaning!',
+    imgPath:
+      '/photos/dirtyKitchen.jpg',
+
+  },
+  {
+    label: 'Remove hidden stains and smells!',
+    imgPath:
+      '/photos/cleanKitchen.jpg',
+  },
+  {
+    label: 'Let us do the cleaning!',
+    imgPath:
+      '/photos/dirtyStove.jpg',
+
+  },
+  {
+    label: 'Elimination of grease & oil!',
+    imgPath:
+      '/photos/cleanStove.jpg',
+  }
 ];
+
+
+
+
+
+
+
+
 
 function SwipeableTextMobileStepper() {
   const theme = useTheme();
@@ -71,7 +102,7 @@ function SwipeableTextMobileStepper() {
 
 
 
-      
+
       <AutoPlaySwipeableViews
         axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
         index={activeStep}
@@ -84,7 +115,7 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 300,
+                  height: 500,
                   display: 'block',
                   maxWidth: 600,
                   overflow: 'hidden',
