@@ -102,7 +102,7 @@ const handleScroll = () => {
     prevScrollY.current = currentScrollY;
 
 
-    if (currentScrollY > 120) {
+    if (currentScrollY > 100) {
         setActive(true)
     } else {
         setActive(false)
