@@ -1,6 +1,9 @@
 .info {
     display: flex;
-    padding: 20px;
+    /* padding: 20px; */
+    padding-left: 30px;
+    /* background-color: red; */
+    /* justify-content: center; */
 }
 
 .infosmall {
@@ -9,19 +12,17 @@
 
 
 
-
-
-.sendEmailBtn{
+.sendEmailBtn {
     text-align: center;
 }
 
-.hiddenClass{
+.hiddenClass {
     display: none;
 }
 
 
 
-.sendMailMessage{
+.sendMailMessage {
     padding: 10px;
     text-align: center;
     display: block;
@@ -29,8 +30,46 @@
 }
 
 
+/*-- Form --*/
+.formClass {
+    background-color: blue;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 
 
+.formClass>div>input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+/* .formClass>div ::placeholder {
+    color:black;
+    opacity: 1;
+} */
+
+.formClass>div>textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    height: 200px;
+}
+
+  
 
 
 
