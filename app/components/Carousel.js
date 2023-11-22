@@ -14,47 +14,72 @@ import { autoPlay } from 'react-swipeable-views-utils';
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
+  // {
+  //   label: 'Dirty fridge?',
+  //   imgPath:
+  //     '/photos/dirtyFridge.jpg',
+  // },
+  // {
+  //   label: 'Let us clean it up!',
+  //   imgPath:
+  //     '/photos/cleanFridge.jpg',
+  // },
+  // {
+  //   label: 'Vents need cleaning?',
+  //   imgPath:
+  //     '/photos/dirtyVent.jpg',
+  // },
+  // {
+  //   label: 'Let us do the cleaning!',
+  //   imgPath:
+  //     '/photos/cleanVent.jpg',
+  // },
+  // {
+  //   label: 'Messy kitchen?',
+  //   imgPath:
+  //     '/photos/dirtyKitchen.jpg',
+  // },
+  // {
+  //   label: 'No mess is too big for Mama!',
+  //   imgPath:
+  //     '/photos/cleanKitchen.jpg',
+  // },
+  // {
+  //   label: 'Let us do the cleaning!',
+  //   imgPath:
+  //     '/photos/dirtyStove.jpg',
+
+  // },
+  // {
+  //   label: 'We can clean it all!',
+  //   imgPath:
+  //     '/photos/cleanStove.jpg',
+  // },
+
+
   {
     label: 'Dirty fridge?',
     imgPath:
-      '/photos/dirtyFridge.jpg',
+      '/beforeafter/fridge.jpeg',
   },
   {
-    label: 'Let us clean it up!',
+    label: 'Let Mama Do The Cleaning!',
     imgPath:
-      '/photos/cleanFridge.jpg',
-  },
-  {
-    label: 'Vents need cleaning?',
-    imgPath:
-      '/photos/dirtyVent.jpg',
-  },
-  {
-    label: 'Let us do the cleaning!',
-    imgPath:
-      '/photos/cleanVent.jpg',
-  },
-  {
-    label: 'Messy kitchen?',
-    imgPath:
-      '/photos/dirtyKitchen.jpg',
-  },
-  {
-    label: 'No mess is too big for Mama!',
-    imgPath:
-      '/photos/cleanKitchen.jpg',
-  },
-  {
-    label: 'Let us do the cleaning!',
-    imgPath:
-      '/photos/dirtyStove.jpg',
+      '/beforeafter/kitchencompare.jpeg',
 
   },
   {
-    label: 'We can clean it all!',
+    label: 'Oven Ready for the Holidays!',
     imgPath:
-      '/photos/cleanStove.jpg',
-  }
+      '/beforeafter/oven.jpeg',
+
+  },
+  {
+    label: 'Mama Does It All!',
+    imgPath:
+      '/beforeafter/vent.jpeg',
+
+  },
 ];
 
 
@@ -107,7 +132,7 @@ function SwipeableTextMobileStepper() {
         onChangeIndex={handleStepChange}
         enableMouseEvents
 
-        
+
       >
         {images.map((step, index) => (
           <div key={step.label}>
@@ -115,11 +140,12 @@ function SwipeableTextMobileStepper() {
               <Box
                 component="img"
                 sx={{
-                  height: 500,
+                  height: 400,
                   display: 'block',
                   maxWidth: 600,
                   overflow: 'hidden',
                   width: '100%',
+                  objectFit:'contain'
                 }}
                 src={step.imgPath}
                 alt={step.label}

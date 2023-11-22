@@ -9,6 +9,7 @@ import Image from 'next/image';
 
 import Carousel from '../components/Carousel';
 
+import styles from './page.module.css';
 
 
 
@@ -67,7 +68,7 @@ export default function Home() {
 
 
 
-      <div style={{ paddingTop: '4em' }}>
+      <div className={styles.carouselContainer} style={{ paddingTop: '4em' }}>
 
 
 
