@@ -68,10 +68,7 @@ export default function Home() {
 
 
 
-      <div className={styles.carouselContainer} style={{ paddingTop: '4em' }}>
-
-
-
+      <div className={styles.carouselContainer}>
 
         <Carousel />
 
@@ -79,9 +76,9 @@ export default function Home() {
 
 
 
+
+
       <div style={{ backgroundColor: '', textAlign: 'center', paddingTop: '40px', paddingBottom: '20px' }}>
-
-
 
         <a href="tel:9083706943">
           <Button variant='contained'>Call Now!</Button>

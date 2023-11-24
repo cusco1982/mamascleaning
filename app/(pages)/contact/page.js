@@ -88,17 +88,29 @@ export default function page() {
 
 
   return (
-    <Container maxWidth="1" style={{ backgroundColor: '', margin: "auto", backgroundColor: '', marginTop: '20vh' }}>
+    <Container maxWidth="1" className={styles.totalContainer}>
 
-      <Grid container maxWidth='lg' style={{ margin: 'auto', backgroundColor: '', padding: '40px' }}>
-        <Grid item md={12} style={{ backgroundColor: '', textAlign: 'center' }}>
-          <Typography variant='h5' pb={4} gutterBottom style={{ fontWeight: "600", color: '#40A5FE' }}>
+
+
+
+
+      <Grid container maxWidth='lg' style={{ margin: 'auto', backgroundColor: '', padding: '0px', paddingTop:'10px', paddingBottom:'10px' }}>
+
+        <Grid item md={12} style={{ backgroundColor: '', textAlign: 'center', margin: 'auto' }}>
+          <Typography className={styles.contactTitle} variant='h5' style={{ fontWeight: "600", color: '#40A5FE' }}>
             Get in Touch with Mama's Cleaning Service - Your Trusted Cleaning Partner
           </Typography>
+          <Typography className={styles.contactTitleSmall} variant='h5' style={{ fontWeight: "600", color: '#40A5FE' }}>
+            Get in Touch with Mama!
+          </Typography>
         </Grid>
+
       </Grid>
 
-      <Grid container maxWidth='1' style={{ margin: 'auto', backgroundColor: '', height: '50vh', paddingBottom: '500px' }}>
+
+
+
+      <Grid container maxWidth='1' className={styles.mainContainer}>
 
         <Grid item md={6} style={{ backgroundColor: '', position: 'relative' }}>
           <Image
@@ -115,26 +127,8 @@ export default function page() {
 
 
 
-
-          <Box className={styles.info}>
-            <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
-            <Typography px={4}>|</Typography>
-            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
-          </Box>
-
-
-
-          <Box className={styles.infosmall} py={2}>
-
-            <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
-            <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
-
-          </Box>
-
-
-
           {/* Form */}
-          <div style={{ backgroundColor: '' }}>
+          <div>
 
 
 
@@ -142,7 +136,6 @@ export default function page() {
               onSubmit={handleSubmit}
               className={styles.formClass}
             >
-
 
               <div style={{ display: 'flex' }}>
                 <input
@@ -161,8 +154,6 @@ export default function page() {
 
                 />
               </div>
-
-
 
               <div style={{ display: 'flex' }}>
                 <input
@@ -183,7 +174,6 @@ export default function page() {
                 />
               </div>
 
-
               <div style={{ paddingLeft: '10px', paddingRight: '10px' }}>
                 <textarea
                   id="message"
@@ -192,12 +182,9 @@ export default function page() {
                 />
               </div>
 
-
-
               <div className={email ? styles.hiddenClass : styles.sendEmailBtn}>
                 <Button type='submit' variant="contained">Send</Button>
               </div>
-
 
               <div className={email ? styles.sendMailMessage : styles.hiddenClass}>
                 <Typography>Email sent! Thank you!</Typography>
@@ -223,7 +210,9 @@ export default function page() {
 
 
 
-      <div style={{ display: '', justifyContent: '', textAlign: 'center', backgroundColor: '', padding: '30px' }}>
+
+
+      <div className={styles.hours}>
 
         <Typography variant='h4'>Hours of Operation</Typography>
         <Typography variant='body1'>Monday-Sunday</Typography>
@@ -231,6 +220,14 @@ export default function page() {
 
       </div>
 
+
+
+      <div className={styles.info}>
+
+        <Typography><a style={{ textDecoration: 'none' }} href="mailto:mamascleaningnj1@gmail.com">mamascleaningnj1@gmail.com</a></Typography>
+        <Typography><a style={{ textDecoration: 'none' }} href="tel:9083706943">(908) 370-6943</a></Typography>
+
+      </div>
 
 
 

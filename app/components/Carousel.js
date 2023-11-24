@@ -11,6 +11,8 @@ import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import SwipeableViews from 'react-swipeable-views';
 import { autoPlay } from 'react-swipeable-views-utils';
 
+import styles from './carousel.module.css';
+
 const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 const images = [
@@ -85,11 +87,6 @@ const images = [
 
 
 
-
-
-
-
-
 function SwipeableTextMobileStepper() {
   const theme = useTheme();
   const [activeStep, setActiveStep] = React.useState(0);
@@ -139,10 +136,11 @@ function SwipeableTextMobileStepper() {
             {Math.abs(activeStep - index) <= 2 ? (
               <Box
                 component="img"
+                className={styles.carouselImage}
                 sx={{
-                  height: 400,
+                  // height: 400,
                   display: 'block',
-                  maxWidth: 600,
+                  // maxWidth: 600,
                   overflow: 'hidden',
                   width: '100%',
                   objectFit:'contain'

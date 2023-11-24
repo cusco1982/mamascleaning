@@ -1,5 +1,14 @@
+
+
+
+
+
+
+/* full-screen */
 .carouselContainer {
-    background-color: black;
+    /* background-color: black; */
+    padding: 0;
+    margin-top:1em;
 }
 
 
@@ -7,23 +16,29 @@
 
 
 
-@media only screen and (max-width: 500px) and (min-width: 400px) {
 
-    .carouselContainer {
-        background-color: blue;
-    }
-
-
-}
-
-
-
-
+/* SAMSUNG galaxy s8+ */
 @media only screen and (max-width: 400px) and (min-width: 0px) {
-
     .carouselContainer {
-        background-color: red;
+        /* background-color: red; */
+        padding: 0;
+        margin-top: 6em;
     }
-
-
 }
+
+
+
+
+
+
+/* IPHONE 14 pro max */
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+    .carouselContainer {
+        /* background-color: blue; */
+        padding: 0;
+        margin:0;
+    }
+}
+
+
+

@@ -1,15 +1,3 @@
-.info {
-    display: flex;
-    /* padding: 20px; */
-    padding-left: 30px;
-    /* background-color: red; */
-    /* justify-content: center; */
-}
-
-.infosmall {
-    display: none;
-}
-
 
 
 .sendEmailBtn {
@@ -32,10 +20,11 @@
 
 /*-- Form --*/
 .formClass {
-    background-color: blue;
+    /* background-color: blue; */
     border-radius: 5px;
     background-color: #f2f2f2;
     padding: 20px;
+    /* padding-bottom: 0; */
 }
 
 
@@ -69,23 +58,106 @@
     height: 200px;
 }
 
-  
 
 
 
 
-@media (max-width:500px) {
+.contactTitle {
+    display: inline-block;
 
-    .info {
+}
+
+.contactTitleSmall {
+    display: none;
+    /* background-color: orange; */
+}
+
+
+
+
+.mainContainer{
+    margin: auto;
+    height: 50vh;
+    /* padding-bottom: 430px; */
+}
+
+
+.hours{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    margin:0px;
+}
+
+
+.info {
+    /* background-color: green; */
+    text-align: center;
+    margin-bottom: 10px;
+
+}
+
+
+.totalContainer{
+    margin:auto;
+    margin-top: 17vh;
+}
+
+
+
+/* SAMSUNG galaxy s8+ */
+@media only screen and (max-width: 400px) and (min-width: 0px) {
+
+    .contactTitle {
         display: none;
+    }
+
+    .contactTitleSmall {
+        display: inline-block;
+    }
+
+
+    .hours{
+        margin-top: 60px;
+        padding-top:0px;
+    }
+
+    .info{
+        margin-top: 10px;
     }
 
 
 
-    .infosmall {
-        display: block;
-        text-align: center;
-        /* justify-content: center; */
+}
+
+
+
+
+
+
+/* IPHONE 14 pro max */
+@media only screen and (max-width: 500px) and (min-width: 400px) {
+
+
+    .totalContainer{
+        margin-top: 13vh;
+    }
+
+
+    .contactTitle {
+        display: none;
+    }
+
+    .contactTitleSmall {
+        display: inline-block;
+        padding-top: 0px;
+
+    }
+
+
+    .hours{
+        padding-top: 0px;
+        margin-top: 0px;
     }
 
 }
