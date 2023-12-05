@@ -9,6 +9,7 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import InstagramIcon from '@mui/icons-material/Instagram';
 // import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 // import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import styles from './footer.module.css';
 
 
 import Image from 'next/image';
@@ -22,7 +23,7 @@ export default function Footer() {
 
 
     return (
-        <Box component="footer" sx={{ bgcolor: 'whitesmoke', position:'fixed', bottom:'0', left:'0', right:'0' }}>
+        <Box component="footer" className={styles.mainfooter}>
 
 
             <div style={{ textAlign: 'center', padding: '20px' }}>
