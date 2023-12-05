@@ -60,7 +60,7 @@ function Jumbotron(props) {
               // pr: { md: 0 },
             }}
             textAlign={'center'}
-            // justifyContent={'center'}
+          // justifyContent={'center'}
           >
 
 
@@ -90,7 +90,7 @@ function Jumbotron(props) {
 
 
               <Button variant='contained'>
-                <Link href="/contact" style={{ textDecoration: 'none', color: 'white', textTransform: 'none', fontSize: "1.2em", padding: '10px' }}>
+                <Link href="/contact" className={styles.estimateLink}>
                   Request FREE Estimate
                 </Link>
               </Button>

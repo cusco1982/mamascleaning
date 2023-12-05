@@ -172,16 +172,16 @@ useEffect(() => {
 
 
                         {/* Logo small */}
-                        <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1, mr: 2 }}>
+                        <Box sx={{ display: { xs: 'flex', md: 'none' }, flexGrow: 1 }}>
                             <a href="/">
 
 
                                 <Image
                                     src='/mcs/mamacslogo1.png'
                                     alt='logo'
-                                    height={110}
-                                    width={300}
-                                    style={{ backgroundColor: "" }}
+                                    height={90}
+                                    width={250}
+                                    // style={{ backgroundColor: "orange" }}
                                 />
                             </a>
 

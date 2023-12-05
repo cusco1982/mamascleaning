@@ -47,5 +47,5 @@ export default function FixedBottomNavigation() {
         </BottomNavigation>
       </Paper>
     </Box>
-  );
-}
+  )
+};

@@ -22,13 +22,13 @@ export default function Footer() {
 
 
     return (
-        <Box component="footer" sx={{ bgcolor: 'whitesmoke' }}>
+        <Box component="footer" sx={{ bgcolor: 'whitesmoke', position:'fixed', bottom:'0', left:'0', right:'0' }}>
 
 
             <div style={{ textAlign: 'center', padding: '20px' }}>
 
 
-                <h2>Follow us on 
+                <h2>Follow us on
                     <br />
 
                     <a style={{ textDecoration: 'none', color: 'blue' }} target='_blank' href="https://www.instagram.com/mamascleaningnj/">Instagram</a>
@@ -36,7 +36,7 @@ export default function Footer() {
                     &
                     &nbsp;
 
-                    <a style={{ textDecoration: 'none', color: 'blue' }} target='_blank'  href='https://www.facebook.com/MamasCleaningServiceNJ'>Facebook</a>
+                    <a style={{ textDecoration: 'none', color: 'blue' }} target='_blank' href='https://www.facebook.com/MamasCleaningServiceNJ'>Facebook</a>
 
 
                     !</h2>
@@ -57,10 +57,10 @@ export default function Footer() {
             <Container maxWidth="lg" style={{ textAlign: 'center' }}>
 
 
-<a href="/">
+                <a href="/">
 
-                <Image src={'/mcs/mamacslogo1.png'} alt='mamascleaningnj' height={65} width={180} />
-</a>
+                    <Image src={'/mcs/mamacslogo1.png'} alt='mamascleaningnj' height={65} width={180} />
+                </a>
 
 
 
